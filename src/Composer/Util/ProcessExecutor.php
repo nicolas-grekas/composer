@@ -144,7 +144,7 @@ class ProcessExecutor
             if (Platform::isWindows() && \strlen($command[0]) === strcspn($command[0], ':/\\')) {
                 $command[0] = self::getExecutable($command[0]);
             }
-
+var_dump($command);
             $process = new Process($command, $cwd, $env, null, static::getTimeout());
         }
 

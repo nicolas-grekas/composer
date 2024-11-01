@@ -125,7 +125,7 @@ jobs:
 
       - name: "Run tests"
         if: "matrix.php-version != '7.3'"
-        run: "vendor/bin/simple-phpunit --verbose"
+        run: "vendor/bin/simple-phpunit --verbose --filter testExcludeFromClassmap"
 
       - name: "Run complete test suite on 7.3"
         if: "matrix.php-version == '7.3'"

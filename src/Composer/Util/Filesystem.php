@@ -116,6 +116,8 @@ class Filesystem
 
         $result = $this->getProcess()->execute($cmd, $output) === 0;
 
+        var_dump($result, $output, $this->getProcess()->getErrorOutput());
+
         // clear stat cache because external processes aren't tracked by the php stat cache
         clearstatcache();
 
